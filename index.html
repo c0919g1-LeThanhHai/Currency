@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span>Amount</span><input type="number" id="amount">
+<span>From currency</span>
+<select name="from" id="from">
+    <option value="usd">USD</option>
+    <option value="vnd">Việt Nam</option>
+</select>
+<span>To currency</span>
+<select name="to" id="to">
+    <option value="vnd">Việt Nam</option>
+    <option value="usd">USD</option>
+</select>
+<button type="button" onclick="chuyenDoi()">Chuyển đổi</button>
+<p id="result"></p>
+<script>
+    function chuyenDoi(){
+        let input = document.getElementById("amount").value;
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        let result = document.getElementById("result");
+        let currency = 23000;
+        if(from === to) {
+            alert("Hai giá trị chuyển đổi không được giống nhau");
+        } else {
+            if(to == "usd") {
+                result.innerText = "Result: " + input / currency;
+            } else if(to == "vnd") {
+                result.innerText = "Result: " + input * currency;
+            }
+        }
+    }
+</script>
+</body>
+</html>
