@@ -29,9 +29,9 @@
             alert("Hai giá trị chuyển đổi không được giống nhau");
         } else {
             if(to == "usd") {
-                result.innerText = "Result: " + input / currency;
+                result.innerText = "Result: " + input / currency + from;
             } else if(to == "vnd") {
-                result.innerText = "Result: " + input * currency;
+                result.innerText = "Result: " + input * currency + to;
             }
         }
     }
